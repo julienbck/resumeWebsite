@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       homeVisibility: 'visible',
+      resumeVisibility: 'hidden',
       aboutVisibility: 'hidden',
       portfolioVisibility: 'hidden',
       contactVisibility: 'hidden',
@@ -16,16 +17,27 @@ class App extends Component {
   }
   onClickAtHome = () => {
     this.setState({
-      homeVisibility: 'visible',
+      homeVisibility: 'visible homeContent',
       aboutVisibility: 'hidden',
+      resumeVisibility: 'hidden',
       portfolioVisibility: 'hidden',
       contactVisibility: 'hidden'
+    })
+  }
+  onClickAtResume = () => {
+    this.setState({
+    homeVisibility: 'hidden',
+    aboutVisibility: 'hidden',
+    resumeVisibility: 'visible resumeContent',
+    portfolioVisibility: 'hidden',
+    contactVisibility: 'hidden'
     })
   }
   onClickAtAboutMe = () => {
     this.setState({
     homeVisibility: 'hidden',
-    aboutVisibility: 'visible',
+    aboutVisibility: 'visible aboutContent',
+    resumeVisibility: 'hidden',
     portfolioVisibility: 'hidden',
     contactVisibility: 'hidden'
     })
@@ -34,7 +46,8 @@ class App extends Component {
     this.setState({
     homeVisibility: 'hidden',
     aboutVisibility: 'hidden',
-    portfolioVisibility: 'visible',
+    resumeVisibility: 'hidden',
+    portfolioVisibility: 'visible portfolioContent',
     contactVisibility: 'hidden'
     })
   }
@@ -42,8 +55,9 @@ class App extends Component {
     this.setState({
     homeVisibility: 'hidden',
     aboutVisibility: 'hidden',
+    resumeVisibility: 'hidden',
     portfolioVisibility: 'hidden',
-    contactVisibility: 'visible'
+    contactVisibility: 'visible contactContent'
     })
   }
   render() {
@@ -61,7 +75,7 @@ class App extends Component {
             </div>
           </li>
 
-          <li className="BackgroundImg1" onClick={this.onClickAtHome} >
+          <li className="BackgroundImg1" onClick={this.onClickAtResume} >
             <div className="ContentToTileText">
               <a className="fa fa-home IconStyle"></a>
               <a  className="titleMenu">Resume</a>
@@ -91,6 +105,7 @@ class App extends Component {
         aboutVisibility= {this.state.aboutVisibility}
         portfolioVisibility= {this.state.portfolioVisibility}
         contactVisibility= {this.state.contactVisibility}
+        resumeVisibility= {this.state.resumeVisibility}
         contentGénéral = {this.state.ContentRight}
         />
       </div>
