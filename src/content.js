@@ -14,16 +14,16 @@ class Content extends Component {
         </section>
         <section className= {this.props.aboutVisibility}>
           <h1> ABOUT ME </h1>
-          <p className="paragraph animationtypewriter">Informations about me </p>
+          <p className="paragraph ">Informations about me </p>
 
         </section>
         <section className= {this.props.portfolioVisibility}>
           <h1> PORTFOLIO </h1>
-          <p className="paragraph animationtypewriter">Informations about me </p>
+          <p className="paragraph ">Informations about me </p>
         </section>
         <section className= {this.props.contactVisibility}>
           <h1> CONTACT </h1>
-          <p className="paragraph animationtypewriter">Informations about me </p>
+          <p className="paragraph ">Informations about me </p>
         </section>
       </div>
 
