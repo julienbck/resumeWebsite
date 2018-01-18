@@ -1,0 +1,188 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: arial;
+}
+
+#root {
+  height: 100%;
+}
+
+section {
+  padding: 50px;
+  overflow-y: auto;
+}
+
+h3 {
+  color: #333333;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.ContentRightHome {
+  color: #FFF;
+  width: 50%;
+  height: 100%;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-image: url('BackgroundContent.png');
+}
+
+.ContentRightHome:focus{
+  right: -800px;
+  position: relative;
+  transition: right 2s;
+}
+
+
+h1 {
+  font-size: 100px;
+  border: 3px solid #FFF;
+  width: 60%;
+  margin: 0 auto;
+  transition: border 0.5s linear;
+}
+
+.NavBarFloatLeft {
+  overflow: auto;
+  padding: 0;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  color: #FFF;
+  vertical-align: middle;
+}
+.NavBarFloatLeft .MenuList{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border-style: none;
+}
+.NavBarFloatLeft li{
+  padding: 0;
+  margin: 0;
+  height: 25%;
+  width: 100%;
+  list-style: none;
+}
+.NavBarFloatLeft li a {
+  position: relative;
+  font-size: 40px;
+}
+
+.ContentToTileText{
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.titleMenu {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.IconStyle {
+  position: relative;
+  float:left;
+  left: 50px;
+  top: 10px;
+}
+
+.IconStyle:focus{
+  background-color: blue;
+}
+
+.NavBarFloatLeft a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit;
+}
+
+/*  START BACK TILE*/
+
+.BackgroundImg1{
+  background-image: url('BackgroundResume.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 1s
+}
+.BackgroundImg1:hover{
+  background-size: 110% 110%;
+  transition: background-size 0.5s;
+}
+.BackgroundImg2{
+  background-image: url("BackgroundAbout.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 1s
+}
+.BackgroundImg2:hover{
+  background-size: 110% 110%;
+  transition: background-size 0.5s;
+}
+.BackgroundImg3{
+  background-image: url("BackgroundPortfolio.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 1s
+}
+.BackgroundImg3:hover{
+  background-size: 110% 110%;
+  transition: background-size 0.5s;
+}
+.BackgroundImg4{
+  background-image: url("BackgroundContact.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 1s
+}
+.BackgroundImg4:hover{
+  background-size: 110% 110%;
+  transition: background-size 0.5s;
+}
+
+/* END TILE BACKGROUND */
+
+
+/* START OF TYPING EFFECT */
+.paragraph{
+
+    transform: translateY(10%);
+    color: inherit;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 4px solid #FFF;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.animationtypewriter{
+  animation: typewriter 3s steps(44) 1s 1 normal both, Cursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0%;}
+  to{width: 75%;}
+}
+@keyframes Cursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
