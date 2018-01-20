@@ -6,7 +6,7 @@ class Content extends Component {
   render(){
 
     return(
-      <div className="ContentRightHome">
+      <div className={this.props.contentGeneral}>
         <section className={this.props.homeVisibility}>
           <div className="ContentSection">
             <h1> HELLO </h1>
@@ -16,13 +16,16 @@ class Content extends Component {
         </section>
         <section className= {this.props.aboutVisibility}>
         <div className="ContentSection">
-          <p className="paragraph ">
-About Me  </p>
+        <h3 className="paragraphBlack ">ABOUT ME </h3>
+        <h4 className="paragraphBlack">I&lsquo;m Julien Bock</h4>
+        <hr/>
+
+
         </div>
         </section>
         <section className= {this.props.resumeVisibility}>
-        <div className="ContentSection">
-          <p className="paragraph ">MyResume </p>
+        <div>
+          <h3 className="paragraphBlack ">MyResume </h3>
         </div>
         </section>
         <section className= {this.props.portfolioVisibility}>

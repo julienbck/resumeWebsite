@@ -7,17 +7,18 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      homeVisibility: 'visible',
+      homeVisibility: 'ContentRightHome',
       resumeVisibility: 'hidden',
       aboutVisibility: 'hidden',
       portfolioVisibility: 'hidden',
       contactVisibility: 'hidden',
-      contentGénéral: 'ContentRight'
+      contentGeneral: 'contentGeneral',
+      navbar: 'NavBarFloatLeft'
     }
   }
   onClickAtHome = () => {
     this.setState({
-      homeVisibility: 'visible homeContent',
+      homeVisibility: 'visible',
       aboutVisibility: 'hidden',
       resumeVisibility: 'hidden',
       portfolioVisibility: 'hidden',
@@ -26,11 +27,13 @@ class App extends Component {
   }
   onClickAtResume = () => {
     this.setState({
-    homeVisibility: 'hidden',
+    homeVisibility: 'ContentRightHome MoveOnRight',
     aboutVisibility: 'hidden',
-    resumeVisibility: 'visible resumeContent',
+    resumeVisibility: 'resumeContent',
     portfolioVisibility: 'hidden',
-    contactVisibility: 'hidden'
+    contactVisibility: 'hidden',
+    contentGeneral:'contentGeneral',
+    navbar: 'NavBarFloatLeft MoveOnLeft'
     })
   }
   onClickAtAboutMe = () => {
@@ -63,7 +66,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <nav className="NavBarFloatLeft">
+      <nav className={this.state.navbar}>
 
         <ul className="MenuList">
 
@@ -106,7 +109,7 @@ class App extends Component {
         portfolioVisibility= {this.state.portfolioVisibility}
         contactVisibility= {this.state.contactVisibility}
         resumeVisibility= {this.state.resumeVisibility}
-        contentGénéral = {this.state.ContentRight}
+        contentGeneral = {this.state.contentGeneral}
         />
       </div>
     );
