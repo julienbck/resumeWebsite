@@ -38,29 +38,46 @@ class App extends Component {
   }
   onClickAtAboutMe = () => {
     this.setState({
-    homeVisibility: 'hidden',
-    aboutVisibility: 'visible aboutContent',
-    resumeVisibility: 'hidden',
-    portfolioVisibility: 'hidden',
-    contactVisibility: 'hidden'
+      homeVisibility: 'ContentRightHome MoveOnRight',
+      aboutVisibility: 'aboutContent',
+      resumeVisibility: 'hidden',
+      portfolioVisibility: 'hidden',
+      contactVisibility: 'hidden',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft MoveOnLeft'
     })
   }
   onClickAtPortfolio = () => {
     this.setState({
-    homeVisibility: 'hidden',
-    aboutVisibility: 'hidden',
-    resumeVisibility: 'hidden',
-    portfolioVisibility: 'visible portfolioContent',
-    contactVisibility: 'hidden'
+      homeVisibility: 'ContentRightHome MoveOnRight',
+      aboutVisibility: 'hidden',
+      resumeVisibility: 'hidden',
+      portfolioVisibility: 'portfolioContent',
+      contactVisibility: 'hidden',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft MoveOnLeft'
     })
   }
   onClickAtContact = () => {
     this.setState({
-    homeVisibility: 'hidden',
-    aboutVisibility: 'hidden',
-    resumeVisibility: 'hidden',
-    portfolioVisibility: 'hidden',
-    contactVisibility: 'visible contactContent'
+      homeVisibility: 'ContentRightHome MoveOnRight',
+      aboutVisibility: 'hidden',
+      resumeVisibility: 'hidden',
+      portfolioVisibility: 'hidden',
+      contactVisibility: 'contactContent',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft MoveOnLeft'
+    })
+  }
+  onClickAtCross = () => {
+    this.setState({
+      homeVisibility: 'ContentRightHome BackToRight',
+      aboutVisibility: 'MoveContentBack ',
+      resumeVisibility: 'MoveContentBack',
+      portfolioVisibility: 'MoveContentBack',
+      contactVisibility: 'MoveContentBack',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft BackToLeft'
     })
   }
   render() {
@@ -110,6 +127,7 @@ class App extends Component {
         contactVisibility= {this.state.contactVisibility}
         resumeVisibility= {this.state.resumeVisibility}
         contentGeneral = {this.state.contentGeneral}
+        backToStart = {this.onClickAtCross}
         />
       </div>
     );
