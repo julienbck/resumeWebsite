@@ -69,13 +69,46 @@ class App extends Component {
       navbar: 'NavBarFloatLeft MoveOnLeft'
     })
   }
-  onClickAtCross = () => {
+  onClickAtCrossResume = () => {
     this.setState({
       homeVisibility: 'ContentRightHome BackToRight',
-      aboutVisibility: 'MoveContentBack ',
-      resumeVisibility: 'MoveContentBack',
-      portfolioVisibility: 'MoveContentBack',
-      contactVisibility: 'MoveContentBack',
+      aboutVisibility: 'hidden ',
+      resumeVisibility: 'resumeContentBack',
+      portfolioVisibility: 'hidden',
+      contactVisibility: 'hidden',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft BackToLeft'
+    })
+  }
+  onClickAtCrossAbout = () => {
+    this.setState({
+      homeVisibility: 'ContentRightHome BackToRight',
+      aboutVisibility: 'resumeContentBack',
+      resumeVisibility: 'hidden',
+      portfolioVisibility: 'hidden',
+      contactVisibility: 'hidden',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft BackToLeft'
+    })
+  }
+  onClickAtCrossPortfolio = () => {
+    this.setState({
+      homeVisibility: 'ContentRightHome BackToRight',
+      aboutVisibility: 'hidden ',
+      resumeVisibility: 'hidden',
+      portfolioVisibility: 'resumeContentBack',
+      contactVisibility: 'hidden',
+      contentGeneral:'contentGeneral',
+      navbar: 'NavBarFloatLeft BackToLeft'
+    })
+  }
+  onClickAtCrossContact = () => {
+    this.setState({
+      homeVisibility: 'ContentRightHome BackToRight',
+      aboutVisibility: 'hidden ',
+      resumeVisibility: 'hidden',
+      portfolioVisibility: 'hidden',
+      contactVisibility: 'resumeContentBack',
       contentGeneral:'contentGeneral',
       navbar: 'NavBarFloatLeft BackToLeft'
     })
@@ -90,7 +123,7 @@ class App extends Component {
           <li onClick={this.onClickAtAboutMe} className="BackgroundImg2">
             <div className="ContentToTileText">
               <a className="fa fa-user IconStyle"></a>
-              <a className="titleMenu" >About Me</a>
+              <a className="titleMenu" ><span style={{color:'#6A8D9D'}}>A</span>bout Me</a>
               <p>Same word about me </p>
             </div>
           </li>
@@ -98,7 +131,7 @@ class App extends Component {
           <li className="BackgroundImg1" onClick={this.onClickAtResume} >
             <div className="ContentToTileText">
               <a className="fa fa-home IconStyle"></a>
-              <a  className="titleMenu">Resume</a>
+              <a  className="titleMenu"><span style={{color:'#6A8D9D'}}>R</span>esume</a>
               <p>About my experience and my studies </p>
             </div>
           </li>
@@ -106,7 +139,7 @@ class App extends Component {
           <li className="BackgroundImg3" onClick={this.onClickAtPortfolio}>
             <div className="ContentToTileText">
               <a className="fa fa-picture-o IconStyle"></a>
-              <a className="titleMenu" >Portfolio</a>
+              <a className="titleMenu" ><span style={{color:'#6A8D9D'}}>P</span>ortfolio</a>
               <p>Little infographic creation</p>
             </div>
           </li>
@@ -114,7 +147,7 @@ class App extends Component {
           <li onClick={this.onClickAtContact} className="BackgroundImg4 ">
             <div className="ContentToTileText">
               <a className="fa fa-envelope IconStyle"></a>
-              <a className="titleMenu" >Contact</a>
+              <a className="titleMenu" ><span style={{color:'#6A8D9D'}}>C</span>ontact</a>
               <p>Contact me for more informations</p>
             </div>
           </li>
@@ -127,7 +160,10 @@ class App extends Component {
         contactVisibility= {this.state.contactVisibility}
         resumeVisibility= {this.state.resumeVisibility}
         contentGeneral = {this.state.contentGeneral}
-        backToStart = {this.onClickAtCross}
+        backToStartResume = {this.onClickAtCrossResume}
+        backToStartAbout = {this.onClickAtCrossAbout}
+        backToStartPortfolio = {this.onClickAtCrossPortfolio}
+        backToStartContact = {this.onClickAtCrossContact}
         />
       </div>
     );

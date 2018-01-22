@@ -4,16 +4,31 @@ body, html {
   margin: 0 !important;
   padding: 0 !important;
   font-family: arial;
-  position: absolute;
+  font-family: 'arial', sans-serif;
   overflow-x: hidden;
-background-color: #000;
+  background-color: #000;
 }
 
 #root {
   height: 100%;
+  width: 100%;
+}
+
+
+h1 {
+  font-size: 5vw;
+  border: 3px solid #FFF;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 h3 {
@@ -23,8 +38,8 @@ h3 {
 .App {
   display: flex;
   flex-direction: row;
-  position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .hidden {
@@ -33,21 +48,21 @@ h3 {
 
 
 
+/* START RIGHT CONTENT */
+
 .contentGeneral {
   color: #FFF;
-  width: 50%;
+  flex: 1;
   height: 100%;
-  order: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 
 .ContentRightHome {
-  color: #FFF;
-  width: auto;
+  width: 100%;
   height: 100%;
   display: flex;
   position: relative;
@@ -107,28 +122,66 @@ h3 {
   left: 0;
   top: 0;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   background-size: cover;
   background-image: url('BackgroundContent.png');
   font-family: Helvetica, sans-serif;
   animation:transitionToContent 2s forwards;
 }
 
+.ContentPartLeft {
+
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  float: left;
+  background-color: #FFF;
+}
+
+.ContentPartRight{
+  position: absolute;
+  background-image: url('BackgroundResumeRight.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 50%;
+  right: 0;
+}
+
 
 @keyframes transitionToContent {
-  from{opacity: 1; transform: translateY(-100%); display: none;}
-  to{opacity: 1;transform: translateY(0%)}
+  0%{opacity: 0;}
+  10%{opacity: 0;}
+  100%{opacity: 1;}
 
 }
 
 .MoveContentBack {
-  display: none;
-  -webkit-animation: backToContent 2s ease-in-out;
-  animation: backToContent 2s ease-in-out;
+  -webkit-animation: backToContent 2s forwards;
+  animation: backToContent 2s forwards;
+}
+
+.resumeContentBack {
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url('BackgroundContent.png');
+  font-family: Helvetica, sans-serif;
+  animation:BackContent 2s forwards;
 }
 
 @keyframes BackContent {
-  from {opacity: 1; transform: translateY(0%);}
-  to {opacity: 0;transform: translateY(-100%);}
+  0%{opacity: 1; transform: translateY(0%);}
+  50%{opacity: 0;transform: translateY(0%);}
+  100%{display: none; opacity: 0;transform: translateY(-100%);}
 
 }
 .aboutContent {
@@ -176,16 +229,13 @@ h3 {
 }
 
 
-h1 {
-  font-size: 5vw;
-  border: 3px solid #FFF;
-  padding: 10px;
-  margin: 0 auto;
-}
+/* END RIGHT CONTENT  */
+
+/*  START NAVBAR LEFT*/
 
 .NavBarFloatLeft {
   color: #FFF;
-  width: 50%;
+  flex:1;
   height: 100%;
   display: flex;
   position: relative;
@@ -209,6 +259,7 @@ h1 {
   height: 25%;
   width: 100%;
   list-style: none;
+  border-bottom: solid 1px #ggg;
 }
 .NavBarFloatLeft li a {
   position: relative;
@@ -217,24 +268,20 @@ h1 {
 
 .ContentToTileText{
   position: relative;
-  transform: translateY(-50%);
-  top: 50%;
+  transform: translateX(30%);
+  text-align: justify;
+  top: 30%;
 }
 .titleMenu {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.IconStyle {
-  position: relative;
-  float:left;
-  font-size: 4px;
-  left: 50px;
-  top: 10px;
-}
 
-.IconStyle:focus{
-  background-color: blue;
+
+
+.IconStyle{
+  padding-right: 10px;
 }
 
 .NavBarFloatLeft a {
@@ -243,78 +290,85 @@ h1 {
 }
 
 
-/*  START BACK TILE*/
+  /*  START BACK TILE*/
 
-.BackgroundImg1{
-  background-image: url('BackgroundResume.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-size 1s;
-}
-.BackgroundImg1:hover{
-  background-size: 110% 110%;
-  transition: background-size 0.5s;
-}
-.BackgroundImg2{
-  background-image: url("BackgroundAbout.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-size 1s;
-}
-.BackgroundImg2:hover{
-  background-size: 110% 110%;
-  transition: background-size 0.5s;
-}
-.BackgroundImg3{
-  background-image: url("BackgroundPortfolio.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-size 1s;
-}
-.BackgroundImg3:hover{
-  background-size: 110% 110%;
-  transition: background-size 0.5s;
-}
-.BackgroundImg4{
-  background-image: url("BackgroundContact.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-size 1s;
-}
-.BackgroundImg4:hover{
-  background-size: 110% 110%;
-  transition: background-size 0.5s;
-}
+  .BackgroundImg1{
+    background-image: url('BackgroundResume.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size 1s;
+  }
+  .BackgroundImg1:hover{
+    background-size: 130% 130%;
+    transition: background-size 2s;
+  }
+  .BackgroundImg2{
+    background-image: url("BackgroundAbout.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size 1s;
+  }
+  .BackgroundImg2:hover{
+    background-size: 130% 130%;
+    transition: background-size 2s;
+  }
+  .BackgroundImg3{
+    background-image: url("BackgroundPortfolio.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size 1s;
+  }
+  .BackgroundImg3:hover{
+    background-size: 130% 130%;
+    transition: background-size 2s;
+  }
+  .BackgroundImg4{
+    background-image: url("BackgroundContact.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size 1s;
+  }
+  .BackgroundImg4:hover{
+    background-size: 130% 130%;
+    transition: background-size 2s;
+  }
 
-/* END TILE BACKGROUND */
-
+  /* END TILE BACKGROUND */
+/* END NAVBAR LEFT */
 
 /* START OF TYPING EFFECT */
-.paragraph{
-
-    transform: translateY(10%);
-    color: inherit;
+.line-1{
+    position: relative;
     width: 24em;
     margin: 0 auto;
-    border-right: 4px solid #FFF;
-    font-size: 180%;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 150%;
     text-align: center;
     white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
 }
-.animationtypewriter{
-  animation: typewriter 3s steps(44) 1s 1 normal both, Cursor 500ms steps(44) infinite normal;
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 3s steps(44) 1s 1 normal both, blinkTextCursor 300ms steps(44) infinite normal;
 }
 @keyframes typewriter{
-  from{width: 0%;}
-  to{width: 75%;}
+  from{width: 0;}
+  to{width: 15.5em;}
 }
-@keyframes Cursor{
+@keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
+}
+
+
+.TitleResumeContent{
+  margin-top: 80%;
 }
 
 /* END TYPING EFFECt */
@@ -322,6 +376,7 @@ h1 {
 .close {
   position: absolute;
   right: 32px;
+  z-index: 999;
   top: 32px;
   width: 32px;
   height: 32px;
@@ -333,6 +388,7 @@ h1 {
 }
 .close:before, .close:after {
   position: absolute;
+  z-index: 999;
   left: 15px;
   content: ' ';
   height: 33px;
