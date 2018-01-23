@@ -16,8 +16,19 @@ class Content extends Component {
         </section>
         <section className= {this.props.aboutVisibility}>
         <a onClick={this.props.backToStartAbout} className="close"></a>
-        <div className="ContentPartLeft">
+        <div className="ContentPartLeft" style={{color: '#000'}}>
+        <h2>MY STORY</h2>
         <p>
+        My name is Julien and i&lsquo;ve 22 years old.
+        </p>
+        <p>
+        I am fascinate by computing world since my youngest age.
+        </p>
+        <p>
+        I was above attracted by the gaming graphics to realize compositions for my friends or for projects of video game.
+        </p>
+        <p>
+        After that I became interested at the webdesign
         </p>
 
         </div>

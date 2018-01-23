@@ -146,7 +146,7 @@ class App extends Component {
 
           <li onClick={this.onClickAtContact} className="BackgroundImg4 ">
             <div className="ContentToTileText">
-              <a className="fa fa-envelope IconStyle"></a>
+              <a className=" IconStyle"><a className="fa fa-envelope"></a></a>
               <a className="titleMenu" ><span style={{color:'#6A8D9D'}}>C</span>ontact</a>
               <p>Contact me for more informations</p>
             </div>
