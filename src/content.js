@@ -18,6 +18,8 @@ class Content extends Component {
         <a onClick={this.props.backToStartAbout} className="close"></a>
         <div className="ContentPartLeft" style={{color: '#000'}}>
         <h2>MY STORY</h2>
+        <div className="profilPicture"></div>
+
         <p>
         My name is Julien and i&lsquo;ve 22 years old.
         </p>
@@ -30,6 +32,8 @@ class Content extends Component {
         <p>
         After that I became interested at the webdesign
         </p>
+        <div className="separator"></div>
+
 
         </div>
 
