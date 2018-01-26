@@ -1,3 +1,6 @@
+
+/* GENERAL STYLE TO APP */
+
 body, html {
   width: 100%;
   height: 100%;
@@ -40,279 +43,132 @@ h3 {
   display: none;
 }
 
-
-
-/* START RIGHT CONTENT */
-
 .contentGeneral {
   color: #FFF;
   flex: 1;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 
-.ContentRightHome {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-size: auto 100%;
-  background-position: center;
-  background-image: url('BackgroundContent.png');
-  transition: background-size 1s;
-}
-
-.ContentRightHome:hover{
-  background-size: auto 110%;
-  transition: background-size 1s;
-
-}
-
-.MoveOnRight{
-  animation: MoveToRight 1s forwards;
-}
-
-@keyframes MoveToRight {
-  from{transform: translateX(0%);}
-  to{transform: translateX(100%);}
-}
-@keyframes MoveToLeft{
-  from{transform: translateX(0%);}
-  to{transform: translateX(-100%);}
-}
-
-@keyframes BackToRight {
-  from{transform: translateX(100%);}
-  to{transform: translateX(0%);}
-}
-@keyframes BackToLeft{
-  from{transform: translateX(-100%);}
-  to{transform: translateX(0%);}
-}
-
-.MoveOnLeft {
-  animation: MoveToLeft 1s forwards;
-}
-
-.BackToLeft {
-  animation: BackToLeft 1s forwards;
-}
-.BackToRight {
-  animation: BackToRight 1s forwards;
-}
+/* END GENERAL STYLE */
 
 
 
-.aboutContent {
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  font-family: Helvetica, sans-serif;
-}
+/* HOMEPAGE */
+  /* ANIMATIONs TO MOVE AND TO START POSITION */
 
-.resumeContent {
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  left: 0;
-  top: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  background-size: cover;
-  background-image: url('BackgroundContent.png');
-  font-family: Helvetica, sans-serif;
-  animation:transitionToContent 2s forwards;
-}
+  .MoveOnLeft {
+    animation: MoveToLeft 1s forwards;
+  }
 
-.ContentPartLeft {
+  .BackToLeft {
+    animation: BackToLeft 1s forwards;
+  }
+  .BackToRight {
+    animation: BackToRight 1s forwards;
+  }
 
-  width: 50%;
-  height: 100%;
-  order: 1;
-  padding: 50px;
-  background-color: #FFF;
-}
+  .MoveOnRight{
+    animation: MoveToRight 1s forwards;
+  }
 
-.ContentPartRight{
-  background-image: url('BackgroundResumeRight.png');
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 50%;
-  order: 2;
+  @keyframes MoveToRight {
+    from{transform: translateX(0%);}
+    to{transform: translateX(100%);}
+  }
+  @keyframes MoveToLeft{
+    from{transform: translateX(0%);}
+    to{transform: translateX(-100%);}
+  }
 
-}
-
-.separator{
-  width: 50%;
-  height: 2px;
-  margin: 0 auto;
-  background-color:#6A8D9D;
-
-}
-.profilPicture{
-
-  width: 20%;
-  height: 20%;
-  background-color: red;
-}
-
-@keyframes transitionToContent {
-  0%{opacity: 0;}
-  10%{opacity: 0;}
-  100%{opacity: 1;}
-
-}
-
-.MoveContentBack {
-  -webkit-animation: backToContent 2s forwards;
-  animation: backToContent 2s forwards;
-}
-
-.resumeContentBack {
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  left: 0;
-  top: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-image: url('BackgroundContent.png');
-  font-family: Helvetica, sans-serif;
-  animation:BackContent 2s forwards;
-}
-
-@keyframes BackContent {
-  0%{opacity: 1; transform: translateY(0%);}
-  50%{opacity: 0;transform: translateY(0%);}
-  100%{display: none; opacity: 0;transform: translateY(-100%);}
-
-}
-.aboutContent {
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  left: 0;
-  top: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  background-size: cover;
-  background-image: url('BackgroundContent.png');
-  font-family: Helvetica, sans-serif;
-  animation:transitionToContent 2s forwards;
-}
+  @keyframes BackToRight {
+    from{transform: translateX(100%);}
+    to{transform: translateX(0%);}
+  }
+  @keyframes BackToLeft{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0%);}
+  }
 
 
+  /*  END ANIMATION NAVBAR MOVES AND HOME MOVE */
+
+  .ContentRightHome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url('BackgroundContent.png');
+    transition: background-size 1s;
+  }
+
+  .ContentRightHome:hover{
+    background-size: auto 110%;
+    transition: background-size 1s;
+
+  }
 
 
-.portfolioContent {
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background-size: cover;
-  background-image: url('BackgroundContent.png');
-  font-family: Helvetica, sans-serif;
-  animation:transitionToContent 2s forwards;
-}
-.contactContent {
-  background-color: #FFF;
-  width: 100%;
-  height: 100%;
-  margin: 0 !important;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background-size: cover;
-  background-image: url('BackgroundContent.png');
-  font-family: Helvetica, sans-serif;
-  animation:transitionToContent 2s forwards;
-}
+  /* START NAVBAR */
 
+  /*  START NAVBAR LEFT*/
 
-/* END RIGHT CONTENT  */
+  .NavBarFloatLeft {
+    color: #FFF;
+    flex:1;
+    height: 100%;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    transform: translateX(0%);
+    transition: all 1s ease-out;
+  }
+  .NavBarFloatLeft .MenuList{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-style: none;
+  }
+  .NavBarFloatLeft li{
+    padding: 0;
+    margin: 0;
+    height: 25%;
+    width: 100%;
+    list-style: none;
+    border-bottom: solid 1px #ggg;
+  }
+  .NavBarFloatLeft li a {
+    position: relative;
+  }
+  .ContentToTileText{
+    position: relative;
+    transform: translateX(30%);
+    text-align: justify;
+    top: 30%;
+  }
+  .titleMenu {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3vw;
+  }
+  .IconStyle{
+    background: #6A8D9D;
+    padding:10px;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 10px;
+  }
+  .NavBarFloatLeft a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit;
+  }
 
-/*  START NAVBAR LEFT*/
-
-.NavBarFloatLeft {
-  color: #FFF;
-  flex:1;
-  height: 100%;
-  display: flex;
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  transform: translateX(0%);
-  transition: all 1s ease-out;
-}
-
-
-.NavBarFloatLeft .MenuList{
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  border-style: none;
-}
-.NavBarFloatLeft li{
-  padding: 0;
-  margin: 0;
-  height: 25%;
-  width: 100%;
-  list-style: none;
-  border-bottom: solid 1px #ggg;
-}
-.NavBarFloatLeft li a {
-  position: relative;
-}
-
-.ContentToTileText{
-  position: relative;
-  transform: translateX(30%);
-  text-align: justify;
-  top: 30%;
-}
-.titleMenu {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3vw;
-}
-
-
-
-
-.IconStyle{
-  background: #6A8D9D;
-  padding:10px;
-  border-radius: 50%;
-  bottom: 10px;
-  right: 10px;
-}
-
-.NavBarFloatLeft a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit;
-}
-
-
-  /*  START BACK TILE*/
+  /*  START BACK ITEM*/
 
   .BackgroundImg1{
     background-image: url('BackgroundResume.png');
@@ -359,8 +215,203 @@ h3 {
     transition: background-size 2s;
   }
 
-  /* END TILE BACKGROUND */
-/* END NAVBAR LEFT */
+  /* END ITEM BACKGROUND */
+
+  /* END NAVBAR */
+
+/* END HOME PAGE */
+
+
+
+/* START RIGHT CONTENT */
+  /* GENERAL SETTINGS TO RIGHT CONTENT */
+
+
+  .ContentPartLeft {
+    width: 50%;
+    order: 1;
+    height: auto;
+    padding: 50px;
+    background-color: #FFF;
+  }
+
+  .ContentPartRight{
+    background-image: url('BackgroundResumeRight.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+    order: 2;
+  }
+
+  .ContentStartPosition {
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url('BackgroundContent.png');
+    font-family: Helvetica, sans-serif;
+    animation:BackContent 2s forwards;
+  }
+
+  @keyframes BackContent {
+    0%{opacity: 1; transform: translateY(0%);}
+    50%{opacity: 0;transform: translateY(0%);}
+    100%{display: none; opacity: 0;transform: translateY(-300%);}
+
+  }
+  /* END GENERAL SETTINGS TO RIGHT CONTENT*/
+
+  /* START ABOUT SECTION */
+
+  .aboutContent {
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url('BackgroundContent.png');
+    font-family: Helvetica, sans-serif;
+    animation:transitionToContent 2s forwards;
+  }
+
+  .profilPicture{
+
+    width: 20%;
+    height: 20%;
+    background-color: red;
+  }
+
+  .separator{
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background-color:#6A8D9D;
+
+  }
+
+
+  @keyframes transitionToContent {
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    100%{opacity: 1;}
+
+  }
+
+  /*  END ABOUT SECTION*/
+
+  /* START RESUME SECTION  */
+
+  .resumeContent {
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url('BackgroundContent.png');
+    font-family: Helvetica, sans-serif;
+    animation:transitionToContent 2s forwards;
+  }
+
+  /* END RESUME SECTION */
+
+  /* START PORTFOLIO SECTION */
+
+  .portfolioContent {
+    bbackground-color: #FFF;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url('BackgroundContent.png');
+    font-family: Helvetica, sans-serif;
+    animation:transitionToContent 2s forwards;
+  }
+      /* PORTFOLIO CONTENT */
+
+      .GridPortfolioContent{
+          flex: 1 1;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow-y: auto;
+      }
+
+      .RowPortfolio {
+        margin: 0.3em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .RowPortfolio > img {
+        margin: 0.1em;
+        width: 30%;
+        height: 30%;
+        border-radius: 5px;
+      }
+      .RowPortfolio > img {
+        margin: 0.1em;
+        width: 30%;
+        height: 30%;
+        border-radius: 5px;
+      }
+      /* END PORTFOLIO */
+
+  /* END PORTFORLIO SECTION  */
+
+  /* START CONTACT SECTION  */
+  .contactContent {
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url('BackgroundContent.png');
+    font-family: Helvetica, sans-serif;
+    animation:transitionToContent 2s forwards;
+  }
+  /* END CONTACT SECTION */
+/* END RIGHT CONTENT  */
+
+
 
 /* START OF TYPING EFFECT */
 .line-1{
@@ -422,4 +473,85 @@ h3 {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, .caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeImg {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeImg:hover,
+.closeImg:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }

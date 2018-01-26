@@ -73,7 +73,7 @@ class App extends Component {
     this.setState({
       homeVisibility: 'ContentRightHome BackToRight',
       aboutVisibility: 'hidden ',
-      resumeVisibility: 'resumeContentBack',
+      resumeVisibility: 'ContentStartPosition',
       portfolioVisibility: 'hidden',
       contactVisibility: 'hidden',
       contentGeneral:'contentGeneral',
@@ -83,7 +83,7 @@ class App extends Component {
   onClickAtCrossAbout = () => {
     this.setState({
       homeVisibility: 'ContentRightHome BackToRight',
-      aboutVisibility: 'resumeContentBack',
+      aboutVisibility: 'ContentStartPosition',
       resumeVisibility: 'hidden',
       portfolioVisibility: 'hidden',
       contactVisibility: 'hidden',
@@ -96,7 +96,7 @@ class App extends Component {
       homeVisibility: 'ContentRightHome BackToRight',
       aboutVisibility: 'hidden ',
       resumeVisibility: 'hidden',
-      portfolioVisibility: 'resumeContentBack',
+      portfolioVisibility: 'ContentStartPosition',
       contactVisibility: 'hidden',
       contentGeneral:'contentGeneral',
       navbar: 'NavBarFloatLeft BackToLeft'
@@ -108,7 +108,7 @@ class App extends Component {
       aboutVisibility: 'hidden ',
       resumeVisibility: 'hidden',
       portfolioVisibility: 'hidden',
-      contactVisibility: 'resumeContentBack',
+      contactVisibility: 'ContentStartPosition',
       contentGeneral:'contentGeneral',
       navbar: 'NavBarFloatLeft BackToLeft'
     })
